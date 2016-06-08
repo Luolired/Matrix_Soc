@@ -1,2 +1,3 @@
-# bcp
-bcp复制文件到新目录，新目录若存在同名文件则备份并输出一个回滚脚本;若不存在直接复制
+# Matrix_Soc
+  业务运维组管理平台v1版本
+  Django+BootStrap+Highchart+Databales+Edior
