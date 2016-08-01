@@ -2,6 +2,7 @@
   业务运维组管理平台v1版本
   Django+BootStrap+Highchart+Databales+Edior+layer+soc_wiki+ProcessOn+Tower+redis
  
+ ```
 【添加采集服务器SSH认证密钥串】
 ssh_rsa/soc_web_id_rsa.pub
 添加到 远程端服务器的：~/.ssh/authorized_keys
@@ -60,7 +61,7 @@ try:
                 比较：方案一　只修改单独程序时可以单独查询到的结果修改shangyou_appdata_hash．ｔｘｔ
                 方案二：简单，无须关注shangyou_appdata_hash．ｔｘｔ生成结果，ａｊａｘ无法访问问题
                 但每更新一行刷新时，都需要进行　这台服务器数据重新采集会ｒｅｄｉｓ【无法实现修改ｒｅｄｉｓ哈希表里的其中一行数据哦＼局限在采集点要重新刷新】
-
+```
   
 ![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/222.jpg)
 ![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/333.jpg)
