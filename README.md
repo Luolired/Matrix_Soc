@@ -73,6 +73,7 @@ try:
 ![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/222.jpg)
 ![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/333.jpg)
 ![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/444.jpg)
+![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/Luolired.png)
 ![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/555.jpg)
 ![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/666.jpg)
 ![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/777.jpg)
