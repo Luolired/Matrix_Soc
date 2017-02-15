@@ -1,31 +1,12 @@
 # Matrix_Soc
-  业务运维组管理平台v1版本
-  Django+BootStrap+Highchart+Databales+Edior+layer+soc_wiki+ProcessOn+Tower+redis
- 
+
+## 业务运维组管理平台v2版本 【自研】
+    
+   ```
+  Django+BootStrap+Highchart+Databales+Edior+layer+soc_wiki+ProcessOn+Tower+redis+
+  mysql
+  ```
  ```
-【添加采集服务器SSH认证密钥串】
-ssh_rsa/soc_web_id_rsa.pub
-添加到 远程端服务器的：~/.ssh/authorized_keys
-
-【加密脚本方法】
-#shc -e 31/12/2010 -m "Please contact Gourav Joshi at Gmail dot com" -r -f configs.sh
-
-【logging】
-#定义日志输出格式
-logging.basicConfig(level=logging.ERROR,
-        format = '%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
-        datefmt = '%Y-%m-%d %H:%M:%S',
-        filename = error_log,
-        filemode = 'a')
-try:
-        conn = psycopg2.connect(database=db_name,user=db_user,password=db_pass,host=db_ip,port=5432)
-        cursor = conn.cursor()
-    except Exception,e:
-        print e
-        logging.error('数据库连接失败:%s' % e)
-        return False
-
-【开发日志 UpdateLog】
 【开发日志 UpdateLog】
 20160615 搭建Django实现模板层建立
 20160620 调试模板与各子页面的CSS美观感
@@ -68,6 +49,82 @@ try:
 	完成重大突破,实现Django 用户权限管理.关键要点： user.get_all_permissions()  {% if perms.Soc_Ops_App.woker_report %} 增加 Soc_Ops_App.worker_report 等自定义四种角色权限 & 权限测试。
 20160805
 	解决前端报错bug:Uncaught TypeError: undefined is not a function $('.tip').tooltip();  jquery冲突:<script src="/js/jquery.min.js"></script> && 解决下拉子菜单选中后又弹回刷新问题，达到用户选择后仍然保持同级子目录 && 完成目录架构url 建立目录分门别类而且在view层 index直接一处定义修改子菜单名称路径 && 解决 主面板左上角logo 无法url跳转问题，解决注释z-index,至此 Matrix-Soc 完成 1.0版本最终发布
+20160820
+    重新对数据库字段表重新设计,表与表关联通过id进行链接.show create table yunwei_program;
+<br/>
+20160822
+    因为表字段的更改，重新修正js与前端html字段名称
+<br/>
+20160825
+    改善用户体验，在多表查询关系下,可以选择列段进行隐藏功能
+<br/>
+20160901
+    增加导航链接组,方便跳转到其他子后台管理系统如Nagios\Cacti\007后台\进程管理系统
+<br/>
+20161009
+    由于工作时间忙于Supervisor与keepalived高可用实施，重新开始开发
+    1.解决主页home/dashboard.html打开加载缓慢的问题(注释获取<!--link href='/css/fonts.useso.css' rel='stylesheet' type='text/css'-->)
+<br/>
+    20161013
+    增加工具箱功能 可以使用yhbf 输入字符串进行加解密功能。涉及 HTML+POST+AJAX+VIEW。成功解决多层目录CSRF 403 和500报错，为表单的提交和返回结果垫>
+底模板基础。原因在于多层目录需要直接指定路径eg:action="/tools_data/tools_yhbf" url:"/tools_data/tools_yhbf", url(r'^tools_data/','Soc_Ops_App.views.tools_data')
+<br/>
+	20161031
+    mysql> show create table yunwei_program;解决存储数据select类型数据库存储为tinyint类型,前端需要更换对应列表进行转义成对应前端显示功能。
+    开发解决DataTables mDataProp 属性"mRender": function 判断条件,同时解决 数据加载后无法刷新bug,将//oTable.fnReloadAjax(oTable.fnSettings());转>换成: oTable.ajax.reload(oTable.settings()); 数据增删改后，立即刷新返回
+<br/>
+20161107
+    开发解决前端【开发日志】输出文本内容按天分隔
+<br/>
+20161114
+    顺利解决采集器Agent_007ka.py commands.getoutput("curl http://members.3322.org/dyndns/getip").split('\n')[-1] 获取外网ip问题
+    重大更新解决多个ip同时执行采集汇总插入数据库问题。
+<br/>
+20161115
+    开发处理主机索引页面500无法新增修改问题，原因为:前端id组合号写错,导致无法批准组合成串;成功实现批量ip的数据采集,主机索引页面成功可以开启交付
+<br/>
+20161122
+    开发应用查询功能页面三大功能1.主机ip与主机列表显示关联 2.修改应用程序直接关联后端数据表 3.新增应用程序自动转换ip为主机id insert进表 【关联表>增删改开发】
+    4.解决python datetime.datetime is not JSON serializable 报错问题解决5.修改前端可选列端显示隐藏功能美化前端颜色辨别程序状态
+<br/>
+20161123
+    开发Datables数据导出功能失败(按键无法触发execlFlash动作),项目搁浅,恭喜 终于解决文件,可以支持下载导出功能。问题原因为:a.repalce is not funciton。解决方案更新dataTables.buttons.js和buttons.flash.js
+20161130
+    开发应用程序列表新增修改应用程序列表,实现跨表增删改view.py\Server_007ka.py
+<br/>
+20161206
+    处理采集时programrun过长问题,优化采集的数输出,以及准备建立crontab定时任务的采集,结果Server_007ka.py虽然成功调用,但是没有被执行成功,原因不明
+<br/>
+20161207
+    解决ansible在定时任务中无法被执行的原因.有两点需要注意1.private_key_file在插件或配置中需要定义 2.id_rsa需要无密码,id_rsa.pub在采集angent需要3
+.稍微注意ansible.cfg hosts配置
+<br/>
+20161215
+    开发app_search.html yunwei_program表,每个应用程序后面增加4个按钮,刷新、启动、停止、重启程序.实现程序操作管理
+    a.解决aoColumns与columnDefs一起配置空白问题,最后解决调试为:"bAutoWidth": false,"mDataProp": null,headerCells[i].style.width
+    b.解决buttons click动作无执行结果问题,解决table not define,调试后增加的4个按钮必须是在initTable()函数里,click动作
+    c.解决全局变量登录用户名 gloal name,没有被定义,解决为调试赋值成新的true_name
+<br/>
+20161220
+    修改整体前端UI字体,T.html模板里加入layui.css,使整体字体美观效果更突出显示,提高用户体验
+    1.增加日期时间组件文档 - layui.laydate 选择btime时间.可以选择日期和具体时间,但因layDate官方近期将会一次大的改写,暂研究到此
+<br/>
+20161221
+    1.开发onlinechart.html 代理商进单数排名 Tables功能和Highchart饼图,可以实现自定义日期查询和TOP数选择2.解决Python Python to JSON Serialization fails on Decimal问题
+    20161222
+    1.开发onlinechart.html 三系统订单笔数概况 可下钻的柱状图,可以实现查询三系统前一个小时的订单概略以及三个系统各自分布状态,提供了非常好的Httresponse(date)多条数据，以及highchart data数据的组合,待继续完成:其他汇总列+时间控件选择具体时间进度情况。
+<br/>
+20161223
+    1.开发onlinechart.html 重点关注代理商24H进单概况对比 Full Width前24小时的前后两天的对比，解决时间问题的bug,提高容错性
+<br/>
+20161224
+    1.解决当前事情02分数据还在采集的报错bug,开发重点关注代理商24H进单概况对比,可自定义选择代理商对比功能
+<br/>
+20170208
+    1.进行大规模重新编译,加入任务管理系统与用户权限管理,逐步淘汰使用django默认用户权限管理模块,前端模块的【任务管理】与【项目管理】库表设计与前端增删改查的实现，解决date显示问题
+<br/>
+20170209
+    1.实现了 用户管理和用户组管理,前端增删改.与部门ID关联表显示展现
 ```
   
 ![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/222.jpg)
