@@ -2,10 +2,24 @@
 
 ## 业务运维组管理平台v2版本 【自研】
     
-   ```
-  Django+BootStrap+Highchart+Databales+Edior+layer+soc_wiki+ProcessOn+Tower+redis+
-  mysql
-  ```
+### 前端：Matrix模板+BootStrap+layer+Highchart+Datatables
+### 业务平台：Django+Shell+Ansible agent+Server+crontab(==>celery) 
+### 第三方工具模块：Edior+soc_wiki+ProcessOn+Tower+Supervisor+cesi（==>淘汰自己写任务工单管理系统）
+### 数据存储：mysql+redis(哈希映射临时存储)
+
+##开源计划（待离职）
+
+![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/222.jpg)
+![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/333.jpg)
+![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/444.jpg)
+![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/Luolired.png)
+![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/555.jpg)
+![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/666.jpg)
+![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/777.jpg)
+![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/888.jpg)
+![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/aaa.jpg)
+![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/bbb.jpg)
+
  ```
 【开发日志 UpdateLog】
 20160615 搭建Django实现模板层建立
@@ -126,14 +140,3 @@
 20170209
     1.实现了 用户管理和用户组管理,前端增删改.与部门ID关联表显示展现
 ```
-  
-![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/222.jpg)
-![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/333.jpg)
-![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/444.jpg)
-![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/Luolired.png)
-![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/555.jpg)
-![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/666.jpg)
-![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/777.jpg)
-![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/888.jpg)
-![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/aaa.jpg)
-![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/bbb.jpg)
