@@ -1,13 +1,13 @@
 # Matrix_Soc
 
-## 业务运维组管理平台v2版本 【自研】
-    
-### 前端：Matrix模板+BootStrap+layer+Highchart+Datatables
-### 业务平台：Django+Shell+Ansible agent+Server+crontab(==>celery) 
-### 第三方工具模块：Edior+soc_wiki+ProcessOn+Tower+Supervisor+cesi（==>淘汰自己写任务工单管理系统）
-### 数据存储：mysql+redis(哈希映射临时存储)
+## 【DevOps自研】业务运维组管理平台v2版本 
+    
+### 【前端】：Matrix模板+BootStrap+layer+Highchart+Datatables
+### 【业务处理】：Django+Shell+Ansible agent+Server+crontab(==>celery) 
+### 【第三方工具模块】：Edior+soc_wiki+ProcessOn+Tower+Supervisor+cesi（==>淘汰自己写任务工单管理系统）
+### 【数据存储】：mysql+redis(哈希映射临时存储)
 
-##开源计划（待离职）
+##【开源计划】（待压缩清理）
 
 ![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/222.jpg)
 ![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/333.jpg)
