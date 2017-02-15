@@ -7,7 +7,21 @@
 ### 【第三方工具模块】：Edior+soc_wiki+ProcessOn+Tower+Supervisor+cesi（==>淘汰自己写任务工单管理系统）
 ### 【数据存储】：mysql+redis(哈希映射临时存储)
 
-##【开源计划】（待压缩清理）
+##【项目图片】
+![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/001.jpg)
+![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/002.jpg)
+![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/003.jpg)
+![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/004.jpg)
+![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/005.jpg)
+![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/006.jpg)
+![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/007.jpg)
+![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/008.jpg)
+![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/009.jpg)
+![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/010.jpg)
+![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/011.jpg)
+![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/012.jpg)
+![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/013.jpg)
+![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/014.jpg)
 
 ![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/222.jpg)
 ![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/333.jpg)
@@ -20,6 +34,7 @@
 ![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/aaa.jpg)
 ![img](https://github.com/Luolired/Matrix_Soc/blob/master/img/bbb.jpg)
 
+##【项目开发日志】
  ```
 【开发日志 UpdateLog】
 20160615 搭建Django实现模板层建立
